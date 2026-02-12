@@ -4,7 +4,7 @@
 #include <vector>
 
 void runFCFS(std::vector<Job>& jobs) {
-    // Sort by arrival time
+    // on basis of arrival time
     std::sort(jobs.begin(), jobs.end(), [](const Job& a, const Job& b) {
         return a.arrivalTime < b.arrivalTime;
     });
@@ -23,7 +23,7 @@ void runFCFS(std::vector<Job>& jobs) {
 
 struct PriorityCompare {
     bool operator()(const Job* a, const Job* b) {
-        // Lower value means higher priority
+        // Lower value = higher priority
         if (a->priority == b->priority) {
             return a->arrivalTime > b->arrivalTime;
         }
@@ -36,7 +36,7 @@ void runPriorityScheduling(std::vector<Job>& jobs) {
     std::vector<Job> result;
     std::priority_queue<Job*, std::vector<Job*>, PriorityCompare> pq;
     
-    // Work on a copy to avoid messing up indices
+    //  copy to avoid messing up indices
     std::vector<Job> temp = jobs;
     std::sort(temp.begin(), temp.end(), [](const Job& a, const Job& b) {
         return a.arrivalTime < b.arrivalTime;
@@ -47,7 +47,7 @@ void runPriorityScheduling(std::vector<Job>& jobs) {
     int i = 0;
 
     while (completed < n) {
-        // Add all jobs that have arrived at or before currentTime
+        // adding all jobs that have arrived at or before current time
         while (i < n && temp[i].arrivalTime <= currentTime) {
             pq.push(&temp[i]);
             i++;
@@ -70,7 +70,7 @@ void runPriorityScheduling(std::vector<Job>& jobs) {
         currentJob->completionTime = currentTime;
         currentJob->turnaroundTime = currentJob->completionTime - currentJob->arrivalTime;
         
-        // Find original job and update it
+        // finding original job and update it
         for(auto& original : jobs) {
             if(original.id == currentJob->id) {
                 original = *currentJob;

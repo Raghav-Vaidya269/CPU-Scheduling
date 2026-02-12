@@ -4,7 +4,7 @@ Welcome to the **CPU Job Scheduling Simulator**! This is a modern, modular C++ a
 
 ---
 
-## 🚀 Overview
+##  Overview
 
 In a multitasking environment, the CPU needs a strategy to decide which job to run next. This simulator emulates that process by taking a list of jobs (with arrival times, burst times, and priorities) and applying a scheduling algorithm to determine the execution order, waiting times, and turnaround times.
 
@@ -19,7 +19,7 @@ In a multitasking environment, the CPU needs a strategy to decide which job to r
 
 ---
 
-## 🏗️ Modular Architecture
+## Modular Architecture
 
 One of the highlights of this project is its **Modular Design**. Instead of a single, cluttered source file, the project is organized into logical modules, making it professional, easy to debug, and highly extensible.
 
@@ -41,7 +41,7 @@ One of the highlights of this project is its **Modular Design**. Instead of a si
 
 ---
 
-## 🛠️ How to Build and Run
+##  How to Build and Run
 
 The project uses **CMake**, making it cross-platform and easy to compile.
 
@@ -64,7 +64,7 @@ The project uses **CMake**, making it cross-platform and easy to compile.
 
 ---
 
-## 📊 Example Output
+## Example Output
 
 After running the simulation, you'll see a clean breakdown:
 
@@ -84,4 +84,4 @@ Average Turnaround Time: 6.50
 ```
 
 ---
-*Created with ❤️ by Team 4 as a demonstration of clean C++ architecture.*
+*Created with ❤️ by Team Job Scheduleras a demonstration of clean C++ architecture.*
