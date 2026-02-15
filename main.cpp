@@ -1,8 +1,7 @@
 #include "Job.h"
 #include <iostream>
 #include <vector>
-#include <thread>
-#include <chrono>
+#include <windows.h>
 
 int main() {
     std::cout << "--- CPU Job Scheduling Simulator ---\n";
@@ -30,10 +29,9 @@ int main() {
     std::cout << "Select algorithm: ";
     std::cin >> algoChoice;
 
-    std::cout << "\nSimulating scheduling...\n";
     for (int i = 1; i <= 100; ++i) {
-        showProgressBar(i, 100);
-        std::this_thread::sleep_for(std::chrono::milliseconds(10));
+        std::cout << "Loading: " << i << "%\r";
+        Sleep(10);
     }
     std::cout << "\nSimulation Complete!\n";
 

@@ -1,3 +1,0 @@
-/home/doberman/DifferentDrive/JobSchedule/JobScheduler/build/CMakeFiles/JobScheduler.dir
-/home/doberman/DifferentDrive/JobSchedule/JobScheduler/build/CMakeFiles/edit_cache.dir
-/home/doberman/DifferentDrive/JobSchedule/JobScheduler/build/CMakeFiles/rebuild_cache.dir

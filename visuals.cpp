@@ -1,9 +1,6 @@
 #include "Job.h"
 #include <iostream>
 #include <vector>
-#include <thread>
-#include <chrono>
-#include "Job.h"
 
 
 void printGanttChart(const std::vector<Job>& jobs) {

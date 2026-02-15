@@ -1,0 +1,4 @@
+build/
+build_log.txt
+build_log_verbose.txt
+compile_log.txt
